@@ -2,9 +2,11 @@ extends Controller
 class_name Player
 
 func _ready():
+	# Capture the mouse cursor within the window frame
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(_delta):
+	# Send our input to the character
 	character.cmd[0] = Input.is_action_pressed("forward")
 	character.cmd[1] = Input.is_action_pressed("backward")
 	character.cmd[2] = Input.is_action_pressed("left")
@@ -14,11 +16,13 @@ func _physics_process(_delta):
 	character.cmd[6] = Input.is_action_just_pressed("primary")
 	character.cmd[7] = Input.is_action_just_pressed("secondary")
 	
+	# Escape toggles the mouse mode
 	if Input.is_action_just_pressed("ui_cancel"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+# For type checking
 func is_player():
 	return true
