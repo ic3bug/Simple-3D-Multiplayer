@@ -93,7 +93,7 @@ func create_server():
 	var _peer_disconnected = get_tree().connect("network_peer_disconnected", self, "_on_peer_disconnected")
 	# Set up an ENet instance
 	var network = NetworkedMultiplayerENet.new()
-	network.create_server(PORT, MAX_PLAYERS)
+	network.create_server(PORT, MAX_PLAYERS - 1)
 	get_tree().set_network_peer(network)
 
 func create_player(id, is_peer):
