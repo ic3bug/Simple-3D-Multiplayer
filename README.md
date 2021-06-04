@@ -1,9 +1,8 @@
 # Simple 3D Multiplayer
 
-Description
-===========
+<a href="https://www.buymeacoffee.com/ic3bug"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a cookie&emoji=🍪&slug=ic3bug&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00"></a>
 
-### A simple multiplayer example project for Godot 3 game engine.
+### A simple multiplayer project for Godot 3 game engine.
 
 Press __Host__ to act as a server. Press __Connect__ to connect to an IP address specified in the script variables of the main scene, set to "localhost" by default.
 To play over internet check your IP address (google "what's my ip") and change it in the script variables mentioned above.
